@@ -13,8 +13,10 @@ let yourUUID = '5dc15e15-f285-4a9d-959b-0e4fbdd77b63'; // UUID,建议修改或�
 let disabletro = false;  // 是否关闭trojan, 设置为true时关闭，false开启 
 
 // CDN 
+// CDN 
 let cfip = [ // 格式:优选域名:端口#备注名称、优选IP:端口#备注名称、[ipv6优选]:端口#备注名称、优选域名#备注 
-    'ddns.156550.xyz#us'
+    'mfa.gov.ua#SG', 'saas.sin.fan#HK', 'store.ubi.com#JP','cf.130519.xyz#KR','cf.008500.xyz#HK', 
+    'cf.090227.xyz#SG', 'cf.877774.xyz#HK','cdns.doon.eu.org#JP','sub.danfeng.eu.org#TW','cf.zhetengsha.eu.org#HK','ddns.156550.xyz#US'
 ];  // 在此感谢各位大佬维护的优选域名
 
 function closeSocketQuietly(socket) { 
