@@ -14,7 +14,7 @@ let disabletro = false;  // 是否关闭trojan, 设置为true时关闭，false�
 
 // CDN 
 let cfip = [ // 格式:优选域名:端口#备注名称、优选IP:端口#备注名称、[ipv6优选]:端口#备注名称、优选域名#备注 
-    'ddns.156550.xyz#US'，
+    'ddns.156550.xyz#US'
 ];  // 在此感谢各位大佬维护的优选域名
 
 function closeSocketQuietly(socket) { 
@@ -33,7 +33,7 @@ function formatIdentifier(arr, offset = 0) {
 function base64ToArray(b64Str) {
     if (!b64Str) return { error: null };
     try { 
-        const binaryString = atob(b64Str.replace(/-/g, '+').replace(/_/g, '/'));
+        const binaryString = atob(b64Str.替换(/-/g, '+').替换(/_/g, '/'));
         const bytes = new Uint8Array(binaryString.length);
         for (let i = 0; i < binaryString.length; i++) {
             bytes[i] = binaryString.charCodeAt(i);
@@ -49,7 +49,7 @@ function parsePryAddress(serverStr) {
     serverStr = serverStr.trim();
     // 解析 S5
     if (serverStr.startsWith('socks://') || serverStr.startsWith('socks5://')) {
-        const urlStr = serverStr.replace(/^socks:\/\//, 'socks5://');
+        const urlStr = serverStr.替换(/^socks:\/\//, 'socks5://');
         try {
             const url = new URL(urlStr);
             return {
