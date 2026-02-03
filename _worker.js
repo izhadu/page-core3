@@ -14,7 +14,7 @@ let disabletro = false;  // 是否关闭trojan, 设置为true时关闭，false�
 
 // CDN 
 let cfip = [ // 格式:优选域名:端口#备注名称、优选IP:端口#备注名称、[ipv6优选]:端口#备注名称、优选域名#备注 
-    'proxy-us.156550.xyz#US'
+    'proxy.us.156550.xyz#美国','proxy.sg.156550.xyz#新加坡','proxy.jp.156550.xyz#日本','proxy.de.156550.xyz#德国','proxy.nl.156550.xyz#荷兰'
 ];  // 在此感谢各位大佬维护的优选域名
 
 function closeSocketQuietly(socket) { 
