@@ -86,7 +86,7 @@ function parsePryAddress(serverStr) {
         if (closeBracket > 0) {
             const host = serverStr.substring(1, closeBracket);
             const rest = serverStr.substring(closeBracket + 1);
-            if (rest.startsWith(':')) {
+            if (rest。startsWith(':')) {
                 const port = parseInt(rest.substring(1), 10);
                 if (!isNaN(port) && port > 0 && port <= 65535) {
                     return { type: 'direct', host, port };
