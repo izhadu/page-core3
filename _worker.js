@@ -8,7 +8,7 @@ import { connect } from 'cloudflare:sockets';
 
 let subPath = 'link';     // 节点订阅路径,不修改将使用uuid作为订阅路径
 let password = '123456';  // 主页密码,建议修改或添加 PASSWORD环境变量
-let proxyIP = 'ddns.156550.xyz';  // proxyIP 格式：ip、域名、ip:port、域名:port等,没填写port，默认使用443
+let proxyIP = 'ddns.156550.xyz:443';  // proxyIP 格式：ip、域名、ip:port、域名:port等,没填写port，默认使用443
 let yourUUID = '5dc15e15-f285-4a9d-959b-0e4fbdd77b63'; // UUID,建议修改或添加环境便量
 let disabletro = false;  // 是否关闭trojan, 设置为true时关闭，false开启 
 
@@ -33,7 +33,7 @@ function formatIdentifier(arr, offset = 0) {
 function base64ToArray(b64Str) {
     if (!b64Str) return { error: null };
     try { 
-        const binaryString = atob(b64Str.replace(/-/g, '+').replace(/_/g, '/'));
+        const binaryString = atob(b64Str.替换(/-/g, '+').替换(/_/g, '/'));
         const bytes = new Uint8Array(binaryString.length);
         for (let i = 0; i < binaryString.length; i++) {
             bytes[i] = binaryString.charCodeAt(i);
@@ -49,7 +49,7 @@ function parsePryAddress(serverStr) {
     serverStr = serverStr.trim();
     // 解析 S5
     if (serverStr.startsWith('socks://') || serverStr.startsWith('socks5://')) {
-        const urlStr = serverStr.replace(/^socks:\/\//, 'socks5://');
+        const urlStr = serverStr.替换(/^socks:\/\//, 'socks5://');
         try {
             const url = new URL(urlStr);
             return {
